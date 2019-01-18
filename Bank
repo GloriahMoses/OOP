@@ -9,6 +9,10 @@ public class Bank {
         alex.setFirstName("Alex");
         alex.setLastName("Koi");
         alex.setAccNo();
+        
+        account account = new account();
+        account.deposit(5000);
+        System.out.print("Account Balance: "+account.getBalance());
     }
     
 }
