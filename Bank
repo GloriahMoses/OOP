@@ -1,30 +1,24 @@
 Bank
 package bank;
 
-/**
- *
- * @author 119794
- */
 public class Bank {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        customer alex = new customer();
+        alex.setFirstName("Alex");
+        alex.setLastName("Koi");
+        alex.setAccNo();
     }
     
 }
 
 
+
 Customer
 
-package bank;
+ppackage bank;
 
-/**
- *
- * @author 119794
- */
 public class customer {
     String firstName, lastName, gender, phone;
     int accountNumber;
@@ -54,18 +48,32 @@ public class customer {
 
 
 
+
 Account
 
 package bank;
 
-/**
- *
- * @author 119794
- */
 public class account {
     int accountNumber;
     String accountType;
     customer customer;
     float balance;
     
+    public void deposit(float amount){
+        this.balance += amount;
+    }
+    
+    public void withdraw(float amount){
+        if(this.getBalance() >= amount){
+            this.balance -= amount;
+        }
+        else{
+            System.out.print("Insufficient Balance");
+        }
+        
+    }
+    
+    public float getBalance(){
+        return this.balance;
+    }
 }
