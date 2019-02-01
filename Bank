@@ -17,8 +17,6 @@ public class Bank {
     
 }
 
-
-
 Customer
 
 ppackage bank;
@@ -49,9 +47,6 @@ public class customer {
         return this.accountNumber;
     }
 }
-
-
-
 
 Account
 
