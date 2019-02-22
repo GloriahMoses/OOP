@@ -1,0 +1,41 @@
+package inheritancedemo;
+
+//superclass, parent,base
+class Calculator{
+    public int add(int a, int b){
+        return a + b;
+    }   
+}
+
+//subclass, child, derived
+//IS-A relationship (caladv IS-A type of calculator)
+class CalAdv extends Calculator{
+    /*public int add(int a, int b){
+        return a + b;
+    }*/
+    
+    public int multiply(int a, int b){
+        return a * b;
+    }  
+}
+
+class CalcComplete extends CalAdv{
+    public int divide(int a, int b){
+        return a / b;
+    }  
+}
+
+public class InheritanceDemo {
+
+    public static void main(String[] args) {
+        //HAS-A relationship(main HAS-A calcadv object)
+        CalcComplete obj1 = new CalcComplete();
+        int result = obj1.add(5,8);
+        int result1 = obj1.multiply(5,8);
+        int result2 = obj1.divide(5,8);
+        System.out.println(result);
+        System.out.println(result1);
+        System.out.println(result2);
+    }
+    
+}
